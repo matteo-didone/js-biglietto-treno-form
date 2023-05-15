@@ -50,16 +50,7 @@ submitButton.addEventListener("click", function() {
     // Display the calculated values
     priceElement.textContent = ticketPrice.toFixed(2) + " €";
     discountElement.textContent = discountAmount + " %";
-
-    // If priceElement or discountElement are not valid, display an error message 
-    if (priceElement.textContent === "NaN €" || discountElement.textContent === "NaN %")
-    {
-        alert("Please enter a valid number!");
-        priceElement.textContent = "Not Valid";
-        discountElement.textContent = "Not Valid";
-    }
-
-    
+        
     // Clear the input fields
     kmInput.value = "";
     ageInput.value = "";
