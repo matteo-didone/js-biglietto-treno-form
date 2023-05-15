@@ -14,13 +14,36 @@
     </head>
 
     <body>
-        <div class="container">
-            <div class="logo img-fluid d-flex">
-                <img src="/img/Amtrak Logo.png" alt="amtrak-logo" id="amtrak-logo">
+        <div class="container d-flex flex-column align-items-center justify-content-center">
+
+            <div class="logo mb-3">
+                <img src="img/Amtrak Logo.png" alt="amtrak-logo" id="amtrak-logo" class="img-fluid">
             </div> 
+
             <div class="square">
-                <h1>JavaScript Ticket Train</h1>
+                <h1>Amtrack Ticket Train Form</h1>
+
+                <div class="card-body">
+                    <label for="km-question">How many kilometers do you want to run?</label>
+                    <input type="text" id="km" placeholder="Km">
+                </div>
+
+                <div class="card-body">
+                    <label for="age-question">How old are you?</label>
+                    <input type="text" id="age" placeholder="Age">
+                </div>
+
+                <div class="btn btn-primary">
+                    <button id="submit">Submit</button>
+                </div>
+
+                <div class="">
+                    <h2>Price: <span id="price"></span></h2>
+                    <h2>Discount: <span id="discount"></span></h2>
+                </div>
             </div>
+
+
         </div>
 
         <script src="script.js"></script>

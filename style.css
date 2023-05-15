@@ -1,22 +1,29 @@
 .container 
 {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: rgba(4,80,124,255);
+    flex-direction: column;
 }
 
 .square 
 {
-    background-color: #f2f2f2;
+    background-color: rgba(4,80,124,255);
     border: 2px solid #ccc;
     padding: 20px;
     width: 500px;
     text-align: center;
+    color: white;
 }
 
 h1 
 {
+    margin-bottom: 20px;
+}
+
+.logo img
+{
+    width: 200px;
     margin-bottom: 20px;
 }
