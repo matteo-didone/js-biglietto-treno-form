@@ -20,6 +20,12 @@ submitButton.addEventListener("click", function() {
     // Calculate the discount based on the age
     let discountAmount = 0;
 
+    if(age < 0 || age > 120 || isNaN(age) || isNaN(km) || km < 0)
+    {
+        alert("Please enter valid parameters!");
+        return;
+    }
+    
     if (age < 18) 
     {
         discountAmount = 19.4;
@@ -45,6 +51,15 @@ submitButton.addEventListener("click", function() {
     priceElement.textContent = ticketPrice.toFixed(2) + " €";
     discountElement.textContent = discountAmount + " %";
 
+    // If priceElement or discountElement are not valid, display an error message 
+    if (priceElement.textContent === "NaN €" || discountElement.textContent === "NaN %")
+    {
+        alert("Please enter a valid number!");
+        priceElement.textContent = "Not Valid";
+        discountElement.textContent = "Not Valid";
+    }
+
+    
     // Clear the input fields
     kmInput.value = "";
     ageInput.value = "";
