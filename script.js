@@ -23,7 +23,7 @@ submitButton.addEventListener("click", function() {
     if(age < 0 || age > 120 || isNaN(age) || isNaN(km) || km < 0)
     {
         alert("Please enter valid parameters!");
-        return;
+        return; // Used in a conditional block to terminate the function's execution early and prevent further code from being executed if certain conditions are met.
     }
     
     if (age < 18) 
@@ -32,7 +32,7 @@ submitButton.addEventListener("click", function() {
         ticketPrice -= ticketPrice * (discountAmount / 100);
         alert("Because you are under 18 years old, you get a 19.4% discount on your ticket price!");
     } 
-    else if (age > 65) 
+    else if (age >= 65) 
     {
         discountAmount = 37.7;
         ticketPrice -= ticketPrice * (discountAmount / 100);
